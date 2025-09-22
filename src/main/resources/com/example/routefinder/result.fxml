@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+
+<AnchorPane fx:id="result_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="696.0" styleClass="background" stylesheets="@design.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.routefinder.ResultController">
+   <children>
+      <AnchorPane layoutX="-3.0" prefHeight="39.0" prefWidth="699.0" styleClass="navBar" stylesheets="@design.css">
+         <children>
+            <FontIcon iconLiteral="fa-map" iconSize="20" layoutX="12.0" layoutY="25.0">
+               <iconColor>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5394737124443054" green="0.3421661853790283" blue="0.3421661853790283" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </iconColor>
+               <selectionFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6842105388641357" green="0.4149610102176666" blue="0.4149610102176666" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </selectionFill>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.8859857482185273" startX="0.09026128266033254" startY="0.12351543942992875">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.08627451211214066" green="0.3176470696926117" blue="0.04313725605607033" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.4294107258319855" green="0.33629998564720154" blue="0.5899999737739563" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </FontIcon>
+            <Label layoutX="52.0" layoutY="1.0" prefHeight="33.0" prefWidth="176.0" text="Vienna Router Finder" textFill="#361c1c">
+               <font>
+                  <Font name="Hiragino Sans W7" size="14.0" />
+               </font>
+            </Label>
+            <FontIcon iconLiteral="fa-map-marker" iconSize="17" layoutX="34.0" layoutY="17.0">
+               <iconColor>
+                  <LinearGradient startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6315789222717285" green="0.37719297409057617" blue="0.37719297409057617" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </iconColor>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.09870000183582306" green="0.4699999988079071" blue="0.2817428410053253" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.07156635820865631" green="0.25" blue="0.03587963059544563" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </FontIcon>
+            <Button layoutX="639.0" layoutY="2.0" mnemonicParsing="false" onAction="#result_close" prefHeight="36.0" prefWidth="57.0" styleClass="nav-button" stylesheets="@design.css">
+               <graphic>
+                  <FontIcon iconLiteral="fa-close" />
+               </graphic>
+            </Button>
+            <Button layoutX="565.0" layoutY="3.0" mnemonicParsing="false" onAction="#result_minimise" prefHeight="36.0" prefWidth="57.0" styleClass="nav-button" stylesheets="@design.css">
+               <graphic>
+                  <FontIcon iconLiteral="fa-minus" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutX="7.0" layoutY="485.0" prefHeight="331.0" prefWidth="574.0" spacing="10" style="-fx-padding: 20;">
+         <children>
+            <Label fx:id="routeSummaryLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <ListView fx:id="routeListView" prefHeight="340.0" prefWidth="341.0" stylesheets="@design.css" />
+            <Label fx:id="totalDistanceLabel" style="-fx-font-size: 14px;" />
+            <Label fx:id="penaltyLabel" style="-fx-font-size: 14px;" />
+         </children>
+      </VBox>
+      <StackPane fx:id="mapPane" layoutX="29.0" layoutY="84.0" prefHeight="268.0" prefWidth="265.0">
+         <children>
+            <ImageView fx:id="mapImage" fitHeight="412.0" fitWidth="646.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@grey_map.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <Button layoutX="579.0" layoutY="705.0" onAction="#handleBack" prefHeight="26.0" prefWidth="108.0" styleClass="button-mainPage" stylesheets="@design.css" text="Back" />
+   </children>
+</AnchorPane>

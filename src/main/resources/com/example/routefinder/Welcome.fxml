@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.routefinder.startController">
+   <children>
+      <AnchorPane fx:id="start_page" layoutX="-1.0" prefHeight="570.0" prefWidth="435.0" styleClass="background" stylesheets="@design.css">
+         <children>
+            <FontIcon iconLiteral="fa-subway" iconSize="60" layoutX="110.0" layoutY="243.0" wrappingWidth="92.28571319580078">
+               <iconColor>
+                  <LinearGradient endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3893762230873108" green="0.4733593165874481" blue="0.6184210777282715" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </iconColor>
+            </FontIcon>
+            <FontIcon iconLiteral="fa-superpowers" iconSize="115" layoutX="79.0" layoutY="262.0" strokeWidth="0.0" wrappingWidth="193.0">
+               <iconColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6131213307380676" green="0.8026315569877625" blue="0.7363029718399048" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </iconColor>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3584917187690735" green="0.5167418122291565" blue="0.7236841917037964" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.04946393892168999" green="0.05078378692269325" blue="0.05263157933950424" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </FontIcon>
+            <Label layoutX="230.0" layoutY="178.0" prefHeight="45.0" prefWidth="176.0" text="Vienna" textFill="#361c1c">
+               <font>
+                  <Font name="Hiragino Sans W7" size="43.0" />
+               </font>
+            </Label>
+            <Label layoutX="216.0" layoutY="223.0" prefHeight="45.0" prefWidth="147.0" text="Route" textFill="#401c1c">
+               <font>
+                  <Font name="Hiragino Sans W7" size="43.0" />
+               </font>
+            </Label>
+            <Label layoutX="174.0" layoutY="269.0" prefHeight="45.0" prefWidth="162.0" text="Finder" textFill="#320a0a">
+               <font>
+                  <Font name="Hiragino Sans W7" size="43.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="CENTER" layoutX="154.0" layoutY="467.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="33.0" prefWidth="147.0" styleClass="button-mainPage" stylesheets="@design.css" text="Exit">
+               <font>
+                  <Font name="Avenir Heavy" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="155.0" layoutY="401.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="35.0" prefWidth="147.0" styleClass="button-mainPage" stylesheets="@design.css" text="Start">
+               <font>
+                  <Font name="Avenir Heavy" size="16.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutY="-1.0" prefHeight="35.0" prefWidth="435.0" styleClass="navBar" stylesheets="@design.css">
+               <children>
+                  <FontIcon iconLiteral="fa-map" iconSize="20" layoutX="12.0" layoutY="25.0">
+                     <iconColor>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5394737124443054" green="0.3421661853790283" blue="0.3421661853790283" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </iconColor>
+                     <selectionFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6842105388641357" green="0.4149610102176666" blue="0.4149610102176666" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </selectionFill>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.8859857482185273" startX="0.09026128266033254" startY="0.12351543942992875">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.08627451211214066" green="0.3176470696926117" blue="0.04313725605607033" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.4294107258319855" green="0.33629998564720154" blue="0.5899999737739563" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontIcon>
+                  <Label layoutX="52.0" layoutY="1.0" prefHeight="33.0" prefWidth="176.0" text="Vienna Router Finder" textFill="#361c1c">
+                     <font>
+                        <Font name="Hiragino Sans W7" size="14.0" />
+                     </font>
+                  </Label>
+                  <FontIcon iconLiteral="fa-map-marker" iconSize="17" layoutX="34.0" layoutY="17.0">
+                     <iconColor>
+                        <LinearGradient startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6315789222717285" green="0.37719297409057617" blue="0.37719297409057617" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </iconColor>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.09870000183582306" green="0.4699999988079071" blue="0.2817428410053253" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.07156635820865631" green="0.25" blue="0.03587963059544563" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontIcon>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

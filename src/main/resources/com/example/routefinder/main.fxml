@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="548.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.routefinder.MainController">
+   <children>
+      <AnchorPane fx:id="main_page" layoutX="-1.0" prefHeight="681.0" prefWidth="551.0" styleClass="background" stylesheets="@design.css">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="37.0" prefWidth="551.0" styleClass="navBar" stylesheets="@design.css">
+               <children>
+                  <FontIcon iconLiteral="fa-map" iconSize="20" layoutX="12.0" layoutY="25.0">
+                     <iconColor>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5394737124443054" green="0.3421661853790283" blue="0.3421661853790283" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </iconColor>
+                     <selectionFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6842105388641357" green="0.4149610102176666" blue="0.4149610102176666" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </selectionFill>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.8859857482185273" startX="0.09026128266033254" startY="0.12351543942992875">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.08627451211214066" green="0.3176470696926117" blue="0.04313725605607033" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.4294107258319855" green="0.33629998564720154" blue="0.5899999737739563" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontIcon>
+                  <Label layoutX="52.0" layoutY="1.0" prefHeight="33.0" prefWidth="176.0" text="Vienna Router Finder" textFill="#361c1c">
+                     <font>
+                        <Font name="Hiragino Sans W7" size="14.0" />
+                     </font>
+                  </Label>
+                  <FontIcon iconLiteral="fa-map-marker" iconSize="17" layoutX="34.0" layoutY="17.0">
+                     <iconColor>
+                        <LinearGradient startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1381578892469406" green="0.18421052396297455" blue="0.16809210181236267" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6315789222717285" green="0.37719297409057617" blue="0.37719297409057617" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </iconColor>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.09870000183582306" green="0.4699999988079071" blue="0.2817428410053253" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.07156635820865631" green="0.25" blue="0.03587963059544563" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontIcon>
+                  <Button layoutX="494.0" mnemonicParsing="false" onAction="#main_close" prefHeight="36.0" prefWidth="57.0" styleClass="nav-button" stylesheets="@design.css">
+                     <graphic>
+                        <FontIcon iconLiteral="fa-close" />
+                     </graphic>
+                  </Button>
+                  <Button layoutX="437.0" mnemonicParsing="false" onAction="#main_minimise" prefHeight="36.0" prefWidth="57.0" styleClass="nav-button" stylesheets="@design.css">
+                     <graphic>
+                        <FontIcon iconLiteral="fa-minus" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="startStationComboBox" layoutX="14.0" layoutY="403.0" prefHeight="37.0" prefWidth="200.0" />
+            <ComboBox fx:id="endStationComboBox" layoutX="232.0" layoutY="403.0" prefHeight="37.0" prefWidth="200.0" />
+            <ListView fx:id="avoidStationsListView" layoutX="14.0" layoutY="475.0" prefHeight="138.0" prefWidth="200.0" />
+            <ListView fx:id="waypointsListView" layoutX="231.0" layoutY="474.0" prefHeight="139.0" prefWidth="200.0" />
+            <Spinner fx:id="penaltySpinner" layoutX="449.0" layoutY="409.0" prefHeight="26.0" prefWidth="82.0" />
+            <Button fx:id="searchRouteButton" layoutX="438.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleFindRoute" prefHeight="37.0" prefWidth="99.0" styleClass="button-mainPage" stylesheets="@design.css" text="Search" />
+            <Label layoutX="232.0" layoutY="454.0" text="Way Point: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="457.0" text="Station Avoid:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="449.0" layoutY="391.0" text="Penalty:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="imagePane" layoutX="12.0" layoutY="55.0" prefHeight="333.0" prefWidth="531.0" stylesheets="@design.css">
+               <children>
+                  <ImageView fx:id="stationImage" fitHeight="340.0" fitWidth="524.0" pickOnBounds="true" preserveRatio="true" styleClass="image-rounded">
+                     <image>
+                        <Image url="@route.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <HBox layoutX="473.0" layoutY="358.0" prefHeight="26.0" prefWidth="57.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleZoomOut" styleClass="search-button" stylesheets="@design.css">
+                     <graphic>
+                        <FontIcon iconLiteral="fa-search-minus" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleZoomIn" styleClass="search-button" stylesheets="@design.css">
+                     <graphic>
+                        <FontIcon iconLiteral="fa-search-plus" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <CheckBox fx:id="dfsCheck" layoutX="20.0" layoutY="637.0" mnemonicParsing="false" text="Show All Route (DFS)" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
