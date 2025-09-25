@@ -1,7 +1,7 @@
-# 🎭 Route Finder Application
+# 🚇 Vienna Subway Route Finder
 
-A **JavaFX-based theatre booking system** built with **IntelliJ IDEA** and **SceneBuilder**.  
-This application allows administrators to create shows, manage customers, and book tickets with seat selection.  
+A **JavaFX-based subway route finder** for the Vienna metro system, built with **IntelliJ IDEA** and **SceneBuilder**.  
+This application allows users to search and visualize the fastest routes between subway stations, powered by **Dijkstra's algorithm**.
 
 🔗 [GitHub Repository](https://github.com/sunzhengchew/RouteFinder)
 
@@ -9,20 +9,18 @@ This application allows administrators to create shows, manage customers, and bo
 
 ## ✨ Features
 
-- **Show Management**  
-  - Create shows with name, duration, start & end dates  
-  - Define ticket prices for three seat types  
+- **Search Routes**  
+  - Find routes between two stations 
+  - Stay Avoid and Way point functions are available✅
+  - Display travel path and estimated duration  
 
-- **Time Slot Scheduling**  
-  - Create show time slots within a show’s available dates  
+- **Interactive UI**  
+  - Built with JavaFX and SceneBuilder  
+  - User-friendly station selection  
 
-- **Customer Management**  
-  - Add and manage customers  
-
-- **Ticket Booking**  
-  - Create tickets by selecting customer, show, and ticket quantity  
-  - Seat selection with three seat categories  
-  - Seat choices restricted by prior selections (no double-booking)  
+- **Subway Data Management**  
+  - Predefined Vienna subway stations and connections  
+  - Handles line changes and multiple routes   
 
 ---
 
@@ -39,5 +37,5 @@ This application allows administrators to create shows, manage customers, and bo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sunzhengchew/ThearteBookingSystem.git
-   cd ThearteBookingSystem
+   git clone https://github.com/sunzhengchew/RouteFinder
+   cd RouteFinder
