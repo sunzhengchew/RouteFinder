@@ -24,7 +24,7 @@ This application allows users to search and visualize the fastest routes between
 
 ---
 
-## 📸 Screenshots
+## 📸 Preview
 ### Start Page
 ![App start](openpage.png)
 ### Select Station Page
