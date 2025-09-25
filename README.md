@@ -40,4 +40,11 @@ This application allows users to search and visualize the fastest routes between
    git clone https://github.com/sunzhengchew/RouteFinder
    cd RouteFinder
 
-   
+## 📸 Screenshots
+### Start Page
+![App start](openpage.png)
+### Select Station Page
+![Select station and other requirement](map.png)
+### Result Page
+![Search Result](route.png)
+
